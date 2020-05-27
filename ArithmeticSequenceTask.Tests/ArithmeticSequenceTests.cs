@@ -17,13 +17,11 @@ namespace ArithmeticSequenceTask.Tests
 
         [TestCase(int.MaxValue, 1, 2)]
         [TestCase(int.MinValue, -1, 2)]
-        [Property("Mark", 5)]
         public void CalculateTest_SumOutOfRange_ThrowOverflowException(int number, int add, int count)
             => Assert.Throws<OverflowException>(() => Calculate(number, add, count),
                 "The obtained result out of range of integer values.");
 
         [TestCase(3, 2, -10)]
-        [Property("Mark", 1)]
         public void CalculateTest_CountLessOrEqualsZero_ThrowArgumentException(int number, int add, int count)
             => Assert.Throws<ArgumentException>(() => Calculate(number, add, count),
                 "The count of elements of the sequence cannot be less or equals zero.");
