@@ -5,7 +5,7 @@ using static ArithmeticSequenceTask.ArithmeticSequence;
 namespace ArithmeticSequenceTask.Tests
 {
     [TestFixture]
-    public class HiddenTest
+    public class ArithmeticSequenceTest
     {
         [TestCase(3, 2, 1, ExpectedResult = 3)]
         [TestCase(2, 3, 5, ExpectedResult = 40)]
