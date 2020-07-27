@@ -2,10 +2,12 @@ using System;
 using NUnit.Framework;
 using static ArithmeticSequenceTask.ArithmeticSequence;
 
+#pragma warning disable CA1707
+
 namespace ArithmeticSequenceTask.Tests
 {
     [TestFixture]
-    public class ArithmeticSequenceTest
+    public class ArithmeticSequenceTests
     {
         [TestCase(3, 2, 1, ExpectedResult = 3)]
         [TestCase(2, 3, 5, ExpectedResult = 40)]
@@ -18,12 +20,12 @@ namespace ArithmeticSequenceTask.Tests
         [TestCase(int.MaxValue, 1, 2)]
         [TestCase(int.MinValue, -1, 2)]
         public void CalculateTest_SumOutOfRange_ThrowOverflowException(int number, int add, int count)
-            => Assert.Throws<OverflowException>(() => Calculate(number, add, count),
-                "The obtained result out of range of integer values.");
+            => Assert.Throws<OverflowException>(
+                () => Calculate(number, add, count), "The obtained result out of range of integer values.");
 
         [TestCase(3, 2, -10)]
         public void CalculateTest_CountLessOrEqualsZero_ThrowArgumentException(int number, int add, int count)
-            => Assert.Throws<ArgumentException>(() => Calculate(number, add, count),
-                "The count of elements of the sequence cannot be less or equals zero.");
+            => Assert.Throws<ArgumentException>(
+                () => Calculate(number, add, count), "The count of elements of the sequence cannot be less or equals zero.");
     }
 }
