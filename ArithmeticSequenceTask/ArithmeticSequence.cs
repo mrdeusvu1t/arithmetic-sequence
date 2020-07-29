@@ -13,9 +13,9 @@ namespace ArithmeticSequenceTask
         /// <param name="count">The number of occurrences.</param>
         /// <returns>Calculated sum.</returns>
         /// <exception cref="OverflowException">
-        /// Thrown when number is int.MaxValue and term more then zero
-        /// - or
-        /// number is int.MinValue and term less then zero.
+        /// Thrown when number is int.MaxValue and term more then 0
+        /// - or -
+        /// number is int.MinValue and term less then 0.
         /// </exception>
         /// <exception cref="ArgumentException">Throw if count less then zero.</exception>
         public static int Calculate(int number, int add, int count)
