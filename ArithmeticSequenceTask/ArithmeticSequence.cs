@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ArithmeticSequenceTask
 {
@@ -13,14 +13,14 @@ namespace ArithmeticSequenceTask
         /// <param name="count">The number of occurrences.</param>
         /// <returns>Calculated sum.</returns>
         /// <exception cref="OverflowException">
-        /// Throw if number is int.MaxValue and term more then zero
+        /// Thrown when number is int.MaxValue and term more then zero
         /// - or
         /// number is int.MinValue and term less then zero.
         /// </exception>
         /// <exception cref="ArgumentException">Throw if count less then zero.</exception>
         public static int Calculate(int number, int add, int count)
         {
-            throw new NotImplementedException("You need to implement this function.");
+            throw new NotImplementedException("You need to implement this method.");
         }
     }
 }
